@@ -17,11 +17,11 @@ jobs:
           #mdbook-version: 
           mdbook-version: 'latest'
 
-      - run: mdbook build
+      - run: mdbook build docs
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
-          publish_branch: master
+          publish_dir: ./docs/book
+          #publish_branch: master
